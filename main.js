@@ -8,13 +8,16 @@ creo una stringa di appoggio che é input rovesciato
 poi faccio un controllo tra stringa rovesciata e input
 
 */
-const input = 'ciccio';
+const input = 'pippo';
+
+console.log(isPalindrome(input));
 
 function isPalindrome (input) {
     input = String(input);
     let reversedArr = [];
     let reversedStr = '';
-    for (let i = 0; i < input.lenght; i++) {
-        
+    for (let i = 0; i < input.length; i++) {
+        reversedArr.push(input[i]);
     }
+    return(reversedArr);
 }

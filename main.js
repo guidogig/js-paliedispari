@@ -10,7 +10,6 @@ PALINDROMA
 5) poi faccio un controllo tra stringa rovesciata e input
 */
 
-
 //console.log(isPalindrome(prompt("Inserisci la stringa da controllare.")));
 
 function isPalindrome(input) {
@@ -23,8 +22,6 @@ function isPalindrome(input) {
     return reversedStr === input;
 }
 
-
-
 /* 
 PARI E DISPARI
 1) due parametri: 
@@ -32,3 +29,28 @@ PARI E DISPARI
 - numero da 1 a 5, validato con Number.isInteger(numero)
 2) 
 */
+
+const pariDisp = prompt('Scrivi pari o dispari:');
+let numPlayer = Number(prompt('Inserisci un numero tra 1 e 5:'));
+
+while (numPlayer < 1 || numPlayer > 5 || isNaN(numPlayer)) {
+    numPlayer = Number(prompt('Inserisci un numero tra 1 e 5!'));
+} 
+
+
+const numComputer = genNum();
+console.log('numComputer: ', numComputer);
+
+const sum = numPlayer + numComputer;
+console.log('sum: ', sum);
+
+
+
+function genNum() {
+    let num = 1 + Math.floor(Math.random() * 5);
+    return num;
+}
+
+function gioco (pariDisp, numPlayer, numComputer) {
+    
+}

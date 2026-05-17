@@ -1,23 +1,24 @@
 /*Chiedere all’utente di inserire una parola
 Creare una funzione per capire se la parola inserita è palindroma */
 
-/*Un parametro che é la parola inserita in input
+/*
+PALINDROMA
+Un parametro che é la parola inserita in input
 casto a stringa perché sono un cane
-creo un'array di appoggio 
-creo una stringa di appoggio che é input rovesciato
+creo un'array che é input rovesciato
+creo una stringa che é input rovesciato
 poi faccio un controllo tra stringa rovesciata e input
-
 */
-const input = 'pippo';
 
-console.log(isPalindrome(input));
 
-function isPalindrome (input) {
+console.log(isPalindrome(prompt("Inserisci la stringa da controllare.")));
+
+function isPalindrome(input) {
     input = String(input);
     let reversedArr = [];
-    let reversedStr = '';
     for (let i = 0; i < input.length; i++) {
-        reversedArr.push(input[i]);
+        reversedArr.unshift(input[i]);
     }
-    return(reversedArr);
+    let reversedStr = reversedArr.join("");
+    return reversedStr === input;
 }
